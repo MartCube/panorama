@@ -15,7 +15,7 @@
 				</btn>
 			</div>
 			<div class="image">
-				<imageItem :source="'/stay/6.jpg'" />
+				<imageItem :source="'/stay/panorama.jpg'" />
 			</div>
 		</div>
 		<div id="highlights">
