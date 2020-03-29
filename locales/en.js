@@ -1,0 +1,138 @@
+export default {
+	pages: {
+		home: 'Home',
+		inspire: 'Inspire Me',
+		events: 'Events',
+		sport: 'Sport',
+		stay: 'Stay',
+		about: 'About us',
+		faq: 'FAQ',
+		contact: 'Contact',
+	},
+	index: {
+		tripText1: 'Your trip to Krusevo',
+		tripText2: 'Create a fully customized day by day',
+		tripDate: 'Select Your Date',
+		tripButton: 'create your trip',
+		mainTextHeader: 'Why should I choose Krusevo ?',
+		mainTextP1: 'There are many reasons why you should visit Krusevo!',
+		mainTextP2: 'One is for sure, Krusevo is a place where all adrenaline lovers need to come and experience all our activites.',
+		mainTextP3: 'From hiking to biking to paragliding and more! We are providing, supporting and helping all sport events.',
+	},
+
+	inspire: {
+		highlights: 'highlights',
+		card1: 'outdoor activites',
+		card2: 'monuments',
+		card3: 'food & wine',
+		card4: 'alto',
+		card5: 'apartments',
+		card6: 'fitness & spa',
+		card7: 'krusevo & kids',
+		h1: 'Krusevo in every season',
+		h2: 'highlights',
+		text1: 'Easter represents the start of {spring}, while the {summer} is preparing to give you unforgetable sunny days spended with your family.',
+		text2: 'In {autumn} the colors of the forest are shining around in all shades of gold.',
+		text3: 'Until the {winter} blizzards cover the trees under a layer of snow, being the perfect scenario for Christmas.',
+		text4: 'A trip to Krusevo is always worthwhile! Because there is always something going on.',
+		spring: 'spring',
+		summer: 'summer',
+		autumn: 'autumn',
+		winter: 'winter',
+	},
+
+	stay: {
+		textHeader1: 'Welcome to our mountain paradise',
+		textP1: 'Our number one recomended destination!',
+		textP2: 'Hotel with a fascinating panoramic view above Krusevo.',
+		textP3: 'Guests from the Hotel get free ski-passes.',
+	},
+
+	sport: {
+		h1: 'SPORT',
+		p1: 'Krusevo reflects with the best panoramic views, a perfect place for all the lovers of sport and nature.',
+		p2: 'There is no end for fun in sport, you will find activites like {slot1} or {slot12} for all type of participents.',
+		p3: 'Of course if you have more wishes for your active vacation you can check out all our {slot2}.',
+		slot1: 'hiking',
+		slot12: 'mountain biking',
+		slot2: 'activites during this year',
+	},
+
+	biking: {
+		h1: 'Mountain Biking',
+		p1: 'Krusevo is a true paradise for mountain bikers, no matter if you are ambitious and athletic or prefer to go calmly. Over 350 km of well-marked mountain bike trails and walking paths cross through a breathtaking mountain scenery. In the skill park in Stanic, cyclists train their technique.',
+		p2: 'After a tiring day in the saddle, cyclists will find their well-deserved rest high above Krusevo at hotel Panorama. Located directly on the cycle paths, our hotel is the ideal starting point to discover Krusevo.',
+		p3: 'If you bring your bike with you, you can take care of it in our washing station and safely lock it in our bike room. Clothing can be made fresh for the next leg of your trip by taking turns dialing in our washer and dryer, and you can relax your stressed legs in the spa area and hot tub and charge your batteries for the next day.',
+	},
+
+	about: {
+		h1: 'About Us',
+		p1: 'The long awaited story begins here in Krusevo with the residents, with great future potentioal ahead will make the ones who did not belive, to belive again. It begins the story about Panorama - Adrenaline mountain and PANORAMA - All Seasons Adventure. From 15.12.2019 we welcome you to join us in our ALTO Lounge Bar, a place where you can rest this winter atmosphere. In the early Spring, we will start to prepare our mountain with experts who are coming from Switzerland.',
+		p2: 'This project will include all sports from recreational and competitive aspect.',
+		p2_1: '- Over 350 km of well-marked mountain bike trails',
+		p2_2: '- Adrenaline Park for kids and grown ups.',
+		p2_3: '- ATV tours around Krusevo area.',
+		p2_4: '- Nordic skiing.',
+		p2_5: '- Ski schools.',
+		p2_6: '- Оrganised custom tours.',
+		p2_7: '- mountain hiking.',
+		p2_8: '- Degustation of traditional meals',
+		p3: 'The list of activities will grow acording to the wishes and needs of everyone who will visit our center. In our hand we have the chairlift and the catering facility of "ALTO Lounge Bar" where you will find a lot of discounds for food and sport equipment. As the most privileged will be the guests of the hotel "Panorama & SPA"',
+		p4: 'As our main partner and sponsor is hotel "Panorama & SPA" who offers the best experience for the guest who want to take a part of our events. Fallow us and our news as we grow in this project. Together we can do more. We would kindly accept your recomendation as we will be together in this story we create. ',
+	},
+
+	faq: {
+		h1: 'Frequently Asked Questions',
+		p1: 'Do you have other questions ?',
+		p2: 'Write Us',
+		q1: '',
+		a1: '',
+		q2: '',
+		a2: '',
+		q3: '',
+		a3: '',
+		q4: '',
+		a4: '',
+	},
+
+	contact: {
+		chairlift: 'Chairlift',
+		panorama: 'Panorama Hotel',
+		alto: 'Alto Lounge Bar',
+		spa: 'SPA Center',
+		workinghour: 'Working hours',
+		everyday: 'Every day:',
+	},
+
+	contactForm: {
+		h1: 'Write us a message',
+		email: 'E-mail',
+		subject: 'Subject',
+		message: 'Message',
+	},
+
+	tripForm: {
+		h1: 'Create Your Trip',
+		email: 'E-mail',
+		emailPlaceholder: 'Your email',
+		date: 'Date',
+		datePlaceholder: 'Select your Date',
+		participants: 'Participants',
+		participantsPlaceholder: 'How many participants',
+		message: 'Message',
+		messagePlaceholder: 'Tell us more about your trip',
+		activites: 'Activities',
+		activitesPlaceholder: 'Activities you want to do during your trip',
+	},
+
+	button: {
+		seeMore: 'see more',
+		submit: 'submit',
+	},
+
+	success: {
+		h1: 'Message sent successfully',
+		p1: 'thank you for writing to us.',
+		p2: 'expect reply at your mail.',
+	},
+}

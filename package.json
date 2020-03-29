@@ -1,0 +1,36 @@
+{
+	"name": "allseasonspanorama",
+	"version": "1.0.0",
+	"description": "My first-class Nuxt.js project",
+	"author": "mart cube",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate",
+		"lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+	},
+	"dependencies": {
+		"@nuxtjs/prismic": "^1.1.1",
+		"@nuxtjs/pwa": "^3.0.0-beta.20",
+		"lazysizes": "^5.2.0",
+		"nuxt": "^2.12.1",
+		"nuxt-i18n": "^6.7.0",
+		"vee-validate": "^3.2.5",
+		"vue-flatpickr-component": "^8.1.5",
+		"vue-i18n": "^8.16.0"
+	},
+	"devDependencies": {
+		"@nuxtjs/eslint-config": "^2.0.2",
+		"@nuxtjs/eslint-module": "^1.1.0",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.1",
+		"eslint-plugin-nuxt": ">=0.5.2",
+		"eslint-plugin-prettier": "^3.1.2",
+		"node-sass": "^4.13.1",
+		"prettier": "^2.0.2",
+		"sass-loader": "^8.0.2"
+	}
+}

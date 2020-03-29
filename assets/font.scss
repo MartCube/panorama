@@ -1,0 +1,70 @@
+// #####   Global font   #####
+@font-face {
+	font-family: 'next';
+	src: url('fonts/next.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'next_demi';
+	src: url('fonts/next_demi.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'next_bold';
+	src: url('fonts/next_bold.woff2') format('woff2');
+}
+
+// #####   Icon font   #####
+@font-face {
+	font-family: 'fontello';
+	src: url('fonts/icons.woff2') format('woff2'), url('fonts/icons.woff') format('woff'), url('fonts/icons.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+
+   
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	/* opacity: .8; */
+   
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+   
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1em;
+   
+	/* Animation center compensation - margins should be symmetric */
+	/* remove if not needed */
+	margin-left: .2em;
+   
+	/* you can be more comfortable with increased icons size */
+	/* font-size: 120%; */
+   
+	/* Font smoothing. That was taken from TWBS */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+   
+	/* Uncomment for 3D effect */
+	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-plus:before { content: '\e800'; } /* '' */
+.icon-mail:before { content: '\e804'; } /* '' */
+.icon-facebook:before { content: '\e807'; } /* '' */
+.icon-instagram:before { content: '\e808'; } /* '' */
+.icon-youtube:before { content: '\e809'; } /* '' */
+.icon-play:before { content: '\e80d'; } /* '' */
+.icon-attention:before { content: '\e80e'; } /* '' */
+.icon-phone:before { content: '\e813'; } /* '' */
+.icon-up:before { content: '\e817'; } /* '' */
+.icon-location:before { content: '\e820'; } /* '' */
+.icon-calendar:before { content: '\f133'; } /* '' */
