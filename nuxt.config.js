@@ -38,20 +38,9 @@ module.exports = {
 					},
 				],
 			},
-		],
-		'@nuxtjs/pwa',
+		],	
 		'@nuxtjs/prismic',
 	],
-
-	pwa: {
-		manifest: {
-			name: 'Panorama All Seasons Adventure',
-			short_name: 'Panorama Adventure',
-		},
-		icon: {
-			iconFileName: 'logo.png',
-		},
-	},
 
 	prismic: {
 		endpoint: 'https://allseasonspanorama.cdn.prismic.io/api/v2',
