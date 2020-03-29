@@ -1,9 +1,10 @@
 <template>
 	<label class="checkbox">
 		<span>{{ name }}</span>
-		<input type="checkbox" :value="name" />
+		<input type="checkbox" :name="name" :value="name" />
 		<span class="checkmark"></span>
 	</label>
+	<!-- <label> <input type="checkbox" name="attendance" value="Attending" /> Yes </label> -->
 </template>
 
 <script>
