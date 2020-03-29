@@ -54,8 +54,8 @@
 
 			<div class="box_group">
 				<h3>What type of trip you are planing ?</h3>
-        	    <input type="checkbox" value="checkbox" />
- 
+				<label> <input type="checkbox" name="attendance" value="Attending" /> Yes </label>
+
 				<checkbox :name="'Family vacation'" />
 				<checkbox :name="'Business'" />
 				<checkbox :name="'Team building'" />

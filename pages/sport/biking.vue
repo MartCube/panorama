@@ -11,9 +11,6 @@
 			<br />
 			<p>{{ $t('biking.p3') }}</p>
 		</div>
-		<button @click="filterTours">
-			filter
-		</button>
 		<div v-if="bikeTours.length !== 0" class="grid">
 			<section v-for="bikeTour in bikeTours" :key="bikeTour.id">
 				<tourCard :tour="bikeTour" />

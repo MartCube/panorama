@@ -34,7 +34,6 @@ module.exports = {
 				trailingComma: 'all',
 				jsxBracketSameLine: false,
 				bracketSpacing: true,
-				endofline:auto,
 			},
 		],
 		'vue/html-indent': [
