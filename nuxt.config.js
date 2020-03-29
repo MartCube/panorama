@@ -38,7 +38,7 @@ module.exports = {
 					},
 				],
 			},
-		],	
+		],
 		'@nuxtjs/prismic',
 	],
 
