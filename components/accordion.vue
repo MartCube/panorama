@@ -26,7 +26,7 @@ export default {
 		}
 	},
 	methods: {
-		toggleAccordion: function() {
+		toggleAccordion: function () {
 			this.isOpen = !this.isOpen
 		},
 	},

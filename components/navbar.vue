@@ -1,7 +1,7 @@
 <template>
 	<nav class="navbar">
 		<div class="logo">
-			<n-link exact to="/"> <img src="/logo.png"/></n-link>
+			<n-link exact to="/"> <img src="/logo.png" /></n-link>
 			<div class="lang">
 				<nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
 					{{ locale.name }}
@@ -37,7 +37,7 @@ export default {
 	},
 	computed: {
 		availableLocales() {
-			return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+			return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
 		},
 	},
 	methods: {

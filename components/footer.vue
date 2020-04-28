@@ -10,7 +10,7 @@
 					<p>
 						<a href="/contact"><i class="icon icon-mail"></i> jakim@panoramaspa.com </a>
 					</p>
-					<p><i class="icon icon-phone"></i> (+389) 71 32 39 32</p>
+					<p><i class="icon icon-phone"></i> (+389) 070 70 70 72</p>
 				</div>
 				<div class="media">
 					<h3>get in touch</h3>
