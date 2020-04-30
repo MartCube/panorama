@@ -31,9 +31,9 @@
 				<div class="wrapper">
 					<div class="row">
 						<h2>{{ $t('contact.alto') }}</h2>
-						<p><i class="icon icon-location"></i>"Коча Миленку" Бр 80</p>
-						<p><i class="icon icon-play"></i> 7550 Крушево</p>
-						<p><i class="icon icon-phone"></i> (+389) 72 807 807</p>
+						<p><i class="icon icon-location"></i>Станич</p>
+						<p><i class="icon icon-play"></i>Крушево</p>
+						<p><i class="icon icon-phone"></i> (+389) 72 707 072</p>
 					</div>
 					<div class="row">
 						<h3>{{ $t('contact.workinghour') }}</h3>
@@ -46,7 +46,7 @@
 						<h2>{{ $t('contact.spa') }}</h2>
 						<p><i class="icon icon-location"></i>"Коча Миленку" Бр 80</p>
 						<p><i class="icon icon-play"></i> 7550 Крушево</p>
-						<p><i class="icon icon-phone"></i> (+389) 72 807 807</p>
+						<p><i class="icon icon-phone"></i> (+389) 72 805 805</p>
 					</div>
 					<div class="row">
 						<h3>{{ $t('contact.workinghour') }}</h3>
