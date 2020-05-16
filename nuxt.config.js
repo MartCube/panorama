@@ -43,7 +43,7 @@ module.exports = {
 	],
 
 	prismic: {
-		endpoint: 'https://allseasonspanorama.cdn.prismic.io/api/v2',
+		endpoint: 'https://allseasonsadventure.cdn.prismic.io/api/v2',
 		linkResolver: '@/plugins/link-resolver',
 		htmlSerializer: '@/plugins/html-serializer',
 		preview: false,

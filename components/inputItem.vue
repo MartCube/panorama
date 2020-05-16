@@ -5,7 +5,6 @@
 
 		<input v-if="type === 'text'" v-model="input_value" type="text" :name="name" :placeholder="placeholder" />
 		<input v-if="type === 'number'" v-model="input_value" type="number" min="1" :name="name" :placeholder="placeholder" />
-
 		<textarea v-if="type === 'textarea'" v-model="input_value" :name="name" rows="5" :placeholder="placeholder"></textarea>
 	</ValidationProvider>
 </template>

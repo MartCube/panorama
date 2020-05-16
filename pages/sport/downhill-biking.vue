@@ -1,15 +1,10 @@
 <template>
 	<div class="container">
 		<div id="intro">
-			<bgItem :source="'/bg/biking.jpg'" />
+			<bgItem :source="'/bg/downhill.jpg'" />
 		</div>
 		<div id="text">
-			<h2>{{ $t('biking.h1') }}</h2>
-			<p>{{ $t('biking.p1') }}</p>
-			<br />
-			<p>{{ $t('biking.p2') }}</p>
-			<br />
-			<p>{{ $t('biking.p3') }}</p>
+			<h2>Downhill Biking</h2>
 		</div>
 		<div v-if="bikeTours.length !== 0" class="grid">
 			<section v-for="bikeTour in bikeTours" :key="bikeTour.id">

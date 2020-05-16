@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div id="intro">
-			<bgItem :source="'/bg/sport.jpg'" />
+			<bgItem :source="'/bg/road.jpg'" />
 		</div>
 		<div id="text">
 			<h2>{{ $t('sport.h1') }}</h2>
@@ -25,25 +25,25 @@
 		</div>
 		<div id="grid">
 			<div class="card">
-				<a href="/sport/biking">
+				<a href="/sport/mountain-biking">
 					<div class="image">
-						<img data-src="/sport/mountainbike.jpg" class="lazyload" />
+						<img data-src="/sport/mountain.jpg" class="lazyload" />
 						<div class="color-overlay"></div>
 					</div>
 				</a>
 				<h3>mountain biking</h3>
 			</div>
 			<div class="card">
-				<a href="/sport/biking">
+				<a href="/sport/road-biking">
 					<div class="image">
-						<img data-src="/sport/roadbike.jpg" class="lazyload" />
+						<img data-src="/sport/road.jpg" class="lazyload" />
 						<div class="color-overlay"></div>
 					</div>
 				</a>
-				<h3>road cycling</h3>
+				<h3>road biking</h3>
 			</div>
 			<div class="card">
-				<a href="/sport/biking">
+				<a href="/sport/downhill-biking">
 					<div class="image">
 						<img data-src="/sport/downhill.jpg" class="lazyload" />
 						<div class="color-overlay"></div>
