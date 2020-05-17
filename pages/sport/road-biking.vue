@@ -5,10 +5,15 @@
 		</div>
 		<div id="text">
 			<h2>Road Biking</h2>
+			<p>{{ $t('biking.p1') }}</p>
+			<br />
+			<p>{{ $t('biking.p2') }}</p>
+			<br />
+			<p>{{ $t('biking.p3') }}</p>
 		</div>
-		<div v-if="bikeTours.length !== 0" class="grid">
-			<section v-for="bikeTour in bikeTours" :key="bikeTour.id">
-				<tourCard :tour="bikeTour" />
+		<div v-if="roadTours.length !== 0" class="grid">
+			<section v-for="roadTour in roadeTours" :key="roadTour.id">
+				<tourCard :tour="roadTour" />
 			</section>
 		</div>
 	</div>
@@ -24,11 +29,11 @@ export default {
 		tourCard,
 	},
 	async asyncData({ $prismic, error }) {
-		const bikeTours = await $prismic.api.query($prismic.predicates.at('document.type', 'bike-tour'))
+		const roadTours = await $prismic.api.query($prismic.predicates.at('document.type', 'road-tour'))
 
-		if (bikeTours) {
+		if (roadTours) {
 			return {
-				bikeTours: bikeTours.results,
+				roadTours: roadTours.results,
 			}
 		} else {
 			error({ statusCode: 404, message: 'Page not found' })
@@ -58,10 +63,11 @@ export default {
 #text {
 	width: 60vw;
 	max-width: 1100px;
-	margin: 100px 0;
+	margin: 50px 0;
 
 	h2 {
 		text-transform: uppercase;
+		margin-bottom: 50px;
 	}
 	a {
 		text-decoration: none;

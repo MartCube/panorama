@@ -1,12 +1,12 @@
 <template>
 	<div class="imageItem">
 		<spinner v-show="!loaded" />
-		<img class="image lazyload" :data-srcset="source" @load="onLoaded" />
+		<img class="image lazyload" :data-srcset="source" :class="position" @load="onLoaded" />
 	</div>
 </template>
 
 <script>
-import spinner from '~/components/spinner.vue'
+import spinner from '~/components/spinner'
 
 export default {
 	components: {
@@ -16,6 +16,10 @@ export default {
 		source: {
 			type: String,
 			required: true,
+		},
+		position: {
+			type: String,
+			default: 'bottom',
 		},
 	},
 	data() {
@@ -34,12 +38,16 @@ export default {
 <style lang="scss" scoped>
 .imageItem {
 	position: relative;
-
+	height: inherit;
 	.image {
 		width: 100%;
-		height: 90vh;
+		height: 100%;
 		object-fit: cover;
 		object-position: bottom;
+
+		&.center {
+			object-position: center;
+		}
 
 		&.lazyload,
 		&.lazyloading {

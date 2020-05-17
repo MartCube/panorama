@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div id="intro">
-			<bgItem :source="'/bg/mountain.jpg'" />
+			<bgItem :source="'/bg/mountain.jpg'" :position="'center'" />
 		</div>
 		<div id="text">
 			<h2>{{ $t('biking.h1') }}</h2>
@@ -11,9 +11,9 @@
 			<br />
 			<p>{{ $t('biking.p3') }}</p>
 		</div>
-		<div v-if="bikeTours.length !== 0" class="grid">
-			<section v-for="bikeTour in bikeTours" :key="bikeTour.id">
-				<tourCard :tour="bikeTour" />
+		<div v-if="mountainTours.length !== 0" class="grid">
+			<section v-for="mountainTour in mountainTours" :key="mountainTour.id">
+				<tourCard :tour="mountainTour" />
 			</section>
 		</div>
 	</div>
@@ -29,11 +29,11 @@ export default {
 		tourCard,
 	},
 	async asyncData({ $prismic, error }) {
-		const bikeTours = await $prismic.api.query($prismic.predicates.at('document.type', 'bike-tour'))
+		const mountainTours = await $prismic.api.query($prismic.predicates.at('document.type', 'mountain-tour'))
 
-		if (bikeTours) {
+		if (mountainTours) {
 			return {
-				bikeTours: bikeTours.results,
+				mountainTours: mountainTours.results,
 			}
 		} else {
 			error({ statusCode: 404, message: 'Page not found' })
@@ -63,10 +63,11 @@ export default {
 #text {
 	width: 60vw;
 	max-width: 1100px;
-	margin: 100px 0;
+	margin: 50px 0;
 
 	h2 {
 		text-transform: uppercase;
+		margin-bottom: 50px;
 	}
 	a {
 		text-decoration: none;
