@@ -12,7 +12,7 @@
 			<p>{{ $t('biking.p3') }}</p>
 		</div>
 		<div v-if="roadTours.length !== 0" class="grid">
-			<section v-for="roadTour in roadeTours" :key="roadTour.id">
+			<section v-for="roadTour in roadTours" :key="roadTour.id">
 				<tourCard :tour="roadTour" />
 			</section>
 		</div>
@@ -30,7 +30,7 @@ export default {
 	},
 	async asyncData({ $prismic, error }) {
 		const roadTours = await $prismic.api.query($prismic.predicates.at('document.type', 'road-tour'))
-
+		console.log('asda')
 		if (roadTours) {
 			return {
 				roadTours: roadTours.results,
