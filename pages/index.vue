@@ -3,7 +3,7 @@
 		<div id="intro">
 			<div class="video">
 				<a href="#" class="play"><i class="icon icon-play"></i></a>
-				<!-- <video playsinline autoplay muted loop>
+				<!-- <video ref="video" playsinline autoplay muted loop>
 					<source src="video.mp4" type="video/mp4" />
 				</video> -->
 				<video class="lazyload" preload="none" loop muted="" data-autoplay="">
@@ -112,6 +112,12 @@ export default {
 			return this.$t('index.tripDate')
 		},
 	},
+	mounted() {
+		// var video = this.$refs.video
+		// video.oncanplaythrough = function () {
+		// 	video.classList.add('loaded')
+		// }
+	},
 }
 </script>
 
@@ -139,6 +145,7 @@ export default {
 		width: 100%;
 		height: 75vh;
 		position: relative;
+
 		video {
 			width: 100%;
 			height: 75vh;
@@ -151,6 +158,19 @@ export default {
 			transform: translate(-50%, -50%);
 			z-index: 2;
 			object-fit: cover;
+
+			// opacity: 0;
+			// &.loaded {
+			// 	opacity: 1;
+			// }
+			&.lazyload,
+			&.lazyloading {
+				opacity: 0;
+			}
+			&.lazyloaded {
+				opacity: 1;
+				transition: all 0.2 ease;
+			}
 		}
 
 		.play {

@@ -65,7 +65,7 @@ $green: #7eb241;
 		}
 		&.lazyloaded {
 			opacity: 1;
-			transition: all 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+			transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 		}
 	}
 
@@ -107,7 +107,7 @@ $green: #7eb241;
 		}
 		.btn {
 			margin: 0;
-
+			padding-bottom: 5px;
 			font-size: 0.8em;
 			font-family: 'next_bold';
 			text-transform: uppercase;
@@ -116,7 +116,7 @@ $green: #7eb241;
 
 	&:hover {
 		.color-overlay {
-			background: rgba(0, 0, 0, 0.3);
+			background: rgba(0, 0, 0, 0.4);
 		}
 	}
 }

@@ -2,7 +2,10 @@
 	<div class="container">
 		<div class="post">
 			<div class="image">
-				<img :data-src="image" class="lazyload" />
+				<img :data-src="mainImage" class="lazyload" />
+			</div>
+			<div class="title">
+				{{ title }}
 			</div>
 			<div class="date">
 				<i class="icon icon-calendar"></i>
@@ -13,12 +16,19 @@
 					<a href="#"> <span>#</span>{{ tag }}</a>
 				</div>
 			</div>
-			<div class="title">
-				{{ title }}
-			</div>
-			<div class="content">
-				{{ content }}
-			</div>
+
+			<!-- add slices -->
+			<section v-for="(slice, index) in slices" :key="'slice-' + index">
+				<template v-if="slice.slice_type === 'text'">
+					<prismic-rich-text class="paragraph" :field="slice.primary.text" />
+				</template>
+				<template v-if="slice.slice_type === 'image'">
+					<div class="image">
+						<img :data-src="slice.primary.image.url" class="lazyload" :alt="slice.primary.image.alt" />
+						<span class="description"> {{ slice.primary.image.alt }} </span>
+					</div>
+				</template>
+			</section>
 		</div>
 	</div>
 </template>
@@ -38,18 +48,27 @@ export default {
 				post,
 				date,
 				tags: post.tags,
-				image: post.data.post_image.url,
+				mainImage: post.data.post_image.url,
 				title: $prismic.asText(post.data.post_title),
-				content: $prismic.asText(post.data.post_content),
+				slices: post.data.body,
 			}
 		} else {
 			error({ statusCode: 404, message: 'Page not found' })
 		}
 	},
+	head() {
+		return {
+			title: this.title,
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				//{ hid: 'description', name: 'description', content: 'My custom description' },
+			],
+		}
+	},
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $blue: #4a88c8;
 $green: #7eb241;
 .post {
@@ -64,22 +83,29 @@ $green: #7eb241;
 	flex-wrap: wrap;
 
 	.image {
+		max-width: 800px;
 		height: 450px;
+		margin: 20px 0;
 		position: relative;
 
 		img {
-			max-width: 800px;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center;
 			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
 		}
+		.description {
+			display: flex;
+			justify-content: center;
+			opacity: 0.8;
+			font-size: 0.9em;
+		}
 	}
 	.date {
 		display: flex;
 		width: 100%;
-		padding: 10px;
+		padding: 15px 0;
 
 		font-family: 'next_demi';
 		color: #585d62;
@@ -88,6 +114,7 @@ $green: #7eb241;
 		display: flex;
 		width: 100%;
 		justify-content: flex-end;
+		flex-wrap: wrap;
 
 		a {
 			text-decoration: none;
@@ -110,6 +137,18 @@ $green: #7eb241;
 		font-family: 'next_bold';
 		font-size: 2.5em;
 		text-align: center;
+	}
+	.paragraph {
+		margin: 20px 0;
+
+		a {
+			text-decoration: none;
+			color: #4a88c8;
+
+			&:hover {
+				color: #7eb241;
+			}
+		}
 	}
 }
 
