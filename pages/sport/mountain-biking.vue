@@ -47,6 +47,15 @@ export default {
 			bikeTours.data
 		},
 	},
+	head() {
+		return {
+			title: 'Mountain Biking',
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{ hid: 'description', name: 'description', content: 'Mountain Biking in Krusevo' },
+			],
+		}
+	},
 }
 </script>
 

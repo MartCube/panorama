@@ -23,6 +23,19 @@
 	</div>
 </template>
 
+<script>
+export default {
+	head() {
+		return {
+			title: 'About us',
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{ hid: 'description', name: 'description', content: 'about our work' },
+			],
+		}
+	},
+}
+</script>
 <style lang="scss" scoped>
 #text {
 	width: 70vw;

@@ -112,6 +112,15 @@ export default {
 	components: {
 		bgItem,
 	},
+	head() {
+		return {
+			title: 'Inspire',
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{ hid: 'description', name: 'description', content: 'discover our contents and activities' },
+			],
+		}
+	},
 }
 </script>
 

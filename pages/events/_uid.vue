@@ -5,7 +5,7 @@
 				<img :data-src="mainImage" class="lazyload" />
 			</div>
 			<div class="title">
-				{{ title }}
+				<h2>{{ title }}</h2>
 			</div>
 			<div class="date">
 				<i class="icon icon-calendar"></i>
@@ -61,7 +61,7 @@ export default {
 			title: this.title,
 			meta: [
 				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-				//{ hid: 'description', name: 'description', content: 'My custom description' },
+				{ hid: 'description', name: 'description', content: 'Blog Post' },
 			],
 		}
 	},
@@ -134,9 +134,11 @@ $green: #7eb241;
 	}
 	.title {
 		margin: 20px 0;
-		font-family: 'next_bold';
-		font-size: 2.5em;
-		text-align: center;
+		h2 {
+			font-family: 'next_bold';
+			font-size: 2.5em;
+			text-align: center;
+		}
 	}
 	.paragraph {
 		margin: 20px 0;

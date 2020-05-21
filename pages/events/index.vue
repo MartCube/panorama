@@ -42,6 +42,15 @@ export default {
 			error({ statusCode: 404, message: 'Page not found' })
 		}
 	},
+	head() {
+		return {
+			title: 'Events & News',
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{ hid: 'description', name: 'description', content: 'read about the latest events and news' },
+			],
+		}
+	},
 }
 </script>
 

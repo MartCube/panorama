@@ -67,6 +67,15 @@ export default {
 		bgItem,
 		imageItem,
 	},
+	head() {
+		return {
+			title: 'Stay',
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{ hid: 'description', name: 'description', content: 'find accommodation in Krusevo' },
+			],
+		}
+	},
 }
 </script>
 
