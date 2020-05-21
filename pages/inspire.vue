@@ -35,7 +35,7 @@
 			<div class="grid">
 				<a href="/sport" target="blank">
 					<div class="image vertical">
-						<img data-src="/inspire/outdoor.jpg" class="lazyload" />
+						<img data-src="/inspire/outdoor.jpg" class="lazyload" alt="outdoor activites" />
 						<div class="color-overlay"></div>
 						<div class="text">
 							<h2>{{ $t('inspire.card1') }}</h2>
@@ -47,7 +47,7 @@
 
 				<div class="collage">
 					<div class="image">
-						<img data-src="/inspire/monuments.jpg" class="lazyload" />
+						<img data-src="/inspire/monuments.jpg" class="lazyload" alt="monuments" />
 						<div class="color-overlay"></div>
 						<div class="text">
 							<h2>{{ $t('inspire.card2') }}</h2>
@@ -57,7 +57,7 @@
 					</div>
 					<div class="image">
 						<a href="https://panoramaspa.mk/en/alto/" target="blank">
-							<img data-src="/inspire/alto.jpg" class="lazyload" />
+							<img data-src="/inspire/alto.jpg" class="lazyload" alt="restaurant alto" />
 							<div class="color-overlay"></div>
 							<div class="text">
 								<h2>{{ $t('inspire.card4') }}</h2>
@@ -70,7 +70,7 @@
 				<div class="collage">
 					<a href="https://panoramaspa.mk/en/room-suits/" target="blank">
 						<div class="image">
-							<img data-src="/inspire/stay.jpg" class="lazyload" />
+							<img data-src="/inspire/stay.jpg" class="lazyload" alt="apartments" />
 							<div class="color-overlay"></div>
 							<div class="text">
 								<h2>{{ $t('inspire.card5') }}</h2>
@@ -81,7 +81,7 @@
 					</a>
 					<a href="https://panoramaspa.mk/en/spa-2-4/" target="blank">
 						<div class="image">
-							<img data-src="/inspire/spa.jpg" class="lazyload" />
+							<img data-src="/inspire/spa.jpg" class="lazyload" alt="fitness and spa" />
 							<div class="color-overlay"></div>
 							<div class="text">
 								<h2>{{ $t('inspire.card6') }}</h2>
@@ -92,7 +92,7 @@
 					</a>
 				</div>
 				<div class="image vertical">
-					<img data-src="/inspire/kids.jpg" class="lazyload" />
+					<img data-src="/inspire/kids.jpg" class="lazyload" alt="krusevo with kids" />
 					<div class="color-overlay"></div>
 					<div class="text">
 						<h2>{{ $t('inspire.card7') }}</h2>
@@ -115,10 +115,7 @@ export default {
 	head() {
 		return {
 			title: 'Inspire',
-			meta: [
-				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-				{ hid: 'description', name: 'description', content: 'discover our contents and activities' },
-			],
+			meta: [{ hid: 'description', name: 'description', content: 'discover our contents and activities' }],
 		}
 	},
 }

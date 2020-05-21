@@ -45,10 +45,7 @@ export default {
 	head() {
 		return {
 			title: 'Events & News',
-			meta: [
-				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-				{ hid: 'description', name: 'description', content: 'read about the latest events and news' },
-			],
+			meta: [{ hid: 'description', name: 'description', content: 'read about the latest events and news' }],
 		}
 	},
 }

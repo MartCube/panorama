@@ -28,10 +28,7 @@ export default {
 	head() {
 		return {
 			title: 'About us',
-			meta: [
-				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-				{ hid: 'description', name: 'description', content: 'about our work' },
-			],
+			meta: [{ hid: 'description', name: 'description', content: 'about us and our work' }],
 		}
 	},
 }

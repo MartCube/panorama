@@ -5,7 +5,7 @@
 		</div>
 		<div class="wrapper">
 			<div class="text">
-				<imageItem :source="'/logos/panorama.png'" />
+				<imageItem :source="'/logos/panorama.png'" :alt="'Hotel Panorama & SPA'" />
 				<h2>{{ $t('stay.textHeader1') }}</h2>
 				<p>{{ $t('stay.textP1') }}</p>
 				<p>{{ $t('stay.textP2') }}</p>
@@ -15,13 +15,13 @@
 				</btn>
 			</div>
 			<div class="image">
-				<imageItem :source="'/inspire/panorama.jpg'" />
+				<imageItem :source="'/inspire/panorama.jpg'" :alt="'Hotel Panorama & SPA'" />
 			</div>
 		</div>
 		<div id="highlights">
 			<a href="https://panoramaspa.mk/en/room-suits/" target="blank">
 				<div class="image">
-					<img data-src="/inspire/stay.jpg" class="lazyload" />
+					<img data-src="/inspire/stay.jpg" class="lazyload" alt="apartments" />
 					<div class="color-overlay"></div>
 					<div class="text">
 						<h2>{{ $t('inspire.card5') }}</h2>
@@ -32,7 +32,7 @@
 			</a>
 			<a href="https://panoramaspa.mk/en/spa-2-4/" target="blank">
 				<div class="image">
-					<img data-src="/inspire/spa.jpg" class="lazyload" />
+					<img data-src="/inspire/spa.jpg" class="lazyload" alt="fitness and spa" />
 					<div class="color-overlay"></div>
 					<div class="text">
 						<h2>{{ $t('inspire.card6') }}</h2>
@@ -43,7 +43,7 @@
 			</a>
 			<a href="https://panoramaspa.mk/en/alto/" target="blank">
 				<div class="image">
-					<img data-src="/inspire/alto.jpg" class="lazyload" />
+					<img data-src="/inspire/alto.jpg" class="lazyload" alt="restaurant alto" />
 					<div class="color-overlay"></div>
 					<div class="text">
 						<h2>{{ $t('inspire.card4') }}</h2>
@@ -70,10 +70,7 @@ export default {
 	head() {
 		return {
 			title: 'Stay',
-			meta: [
-				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-				{ hid: 'description', name: 'description', content: 'find accommodation in Krusevo' },
-			],
+			meta: [{ hid: 'description', name: 'description', content: 'Hotel Panorama & SPA' }],
 		}
 	},
 }

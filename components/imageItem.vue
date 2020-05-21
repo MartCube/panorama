@@ -1,6 +1,6 @@
 <template>
 	<div class="imageItem">
-		<img class="image lazyload" :data-srcset="source" />
+		<img class="image lazyload" :data-srcset="source" :alt="alt" />
 	</div>
 </template>
 
@@ -8,6 +8,10 @@
 export default {
 	props: {
 		source: {
+			type: String,
+			required: true,
+		},
+		alt: {
 			type: String,
 			required: true,
 		},

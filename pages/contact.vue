@@ -111,7 +111,7 @@ export default {
 			title: 'Contact',
 			meta: [
 				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-				{ hid: 'description', name: 'description', content: 'get in touch' },
+				{ hid: 'description', name: 'description', content: 'contact us' },
 			],
 		}
 	},

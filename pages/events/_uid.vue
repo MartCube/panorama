@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="post">
 			<div class="image">
-				<img :data-src="mainImage" class="lazyload" />
+				<img :data-src="mainImage" class="lazyload" :alt="title" />
 			</div>
 			<div class="title">
 				<h2>{{ title }}</h2>
@@ -59,10 +59,7 @@ export default {
 	head() {
 		return {
 			title: this.title,
-			meta: [
-				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-				{ hid: 'description', name: 'description', content: 'Blog Post' },
-			],
+			meta: [{ hid: 'description', name: 'description', content: 'Blog Post' }],
 		}
 	},
 }

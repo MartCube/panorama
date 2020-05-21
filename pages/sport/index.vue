@@ -27,7 +27,7 @@
 			<div class="card">
 				<a href="/sport/mountain-biking">
 					<div class="image">
-						<img data-src="/sport/mountain.jpg" class="lazyload" />
+						<img data-src="/sport/mountain.jpg" class="lazyload" alt="mountain biking" />
 						<div class="color-overlay"></div>
 					</div>
 				</a>
@@ -36,7 +36,7 @@
 			<div class="card">
 				<a href="/sport/road-biking">
 					<div class="image">
-						<img data-src="/sport/road.jpg" class="lazyload" />
+						<img data-src="/sport/road.jpg" class="lazyload" alt="road biking" />
 						<div class="color-overlay"></div>
 					</div>
 				</a>
@@ -45,7 +45,7 @@
 			<div class="card">
 				<a href="/sport/downhill-biking">
 					<div class="image">
-						<img data-src="/sport/downhill.jpg" class="lazyload" />
+						<img data-src="/sport/downhill.jpg" class="lazyload" alt="downhill biking" />
 						<div class="color-overlay"></div>
 					</div>
 				</a>
@@ -53,63 +53,63 @@
 			</div>
 			<div class="card">
 				<div class="image">
-					<img data-src="/sport/hiking.jpg" class="lazyload" />
+					<img data-src="/sport/hiking.jpg" class="lazyload" alt="hiking" />
 					<div class="color-overlay"></div>
 				</div>
 				<h3>hiking</h3>
 			</div>
 			<div class="card">
 				<div class="image">
-					<img data-src="/sport/orieenting.jpg" class="lazyload" />
+					<img data-src="/sport/orieenting.jpg" class="lazyload" alt="orieenting" />
 					<div class="color-overlay"></div>
 				</div>
 				<h3>orieenting</h3>
 			</div>
 			<div class="card">
 				<div class="image">
-					<img data-src="/sport/climbing.jpg" class="lazyload" />
+					<img data-src="/sport/climbing.jpg" class="lazyload" alt="climbing" />
 					<div class="color-overlay"></div>
 				</div>
 				<h3>climbing</h3>
 			</div>
 			<div class="card">
 				<div class="image">
-					<img data-src="/sport/atv.jpg" class="lazyload" />
+					<img data-src="/sport/atv.jpg" class="lazyload" alt="ATV" />
 					<div class="color-overlay"></div>
 				</div>
 				<h3>ATV riding</h3>
 			</div>
 			<div class="card">
 				<div class="image">
-					<img data-src="/sport/paraglider.jpg" class="lazyload" />
+					<img data-src="/sport/paraglider.jpg" class="lazyload" alt="paragliding" />
 					<div class="color-overlay"></div>
 				</div>
 				<h3>paragliding</h3>
 			</div>
 			<div class="card">
 				<div class="image">
-					<img data-src="/sport/hanglider.jpg" class="lazyload" />
+					<img data-src="/sport/hanglider.jpg" class="lazyload" alt="hangliding" />
 					<div class="color-overlay"></div>
 				</div>
 				<h3>hangliding</h3>
 			</div>
 			<div class="card">
 				<div class="image">
-					<img data-src="/sport/rollerski.jpg" class="lazyload" />
+					<img data-src="/sport/rollerski.jpg" class="lazyload" alt="roller ski" />
 					<div class="color-overlay"></div>
 				</div>
 				<h3>Roller ski</h3>
 			</div>
 			<div class="card">
 				<div class="image">
-					<img data-src="/sport/snowboard.jpg" class="lazyload" />
+					<img data-src="/sport/snowboard.jpg" class="lazyload" alt="snowboarding" />
 					<div class="color-overlay"></div>
 				</div>
 				<h3>snowboarding</h3>
 			</div>
 			<div class="card">
 				<div class="image">
-					<img data-src="/sport/ski.jpg" class="lazyload" />
+					<img data-src="/sport/ski.jpg" class="lazyload" alt="skiing" />
 					<div class="color-overlay"></div>
 				</div>
 				<h3>skiing</h3>
@@ -128,10 +128,7 @@ export default {
 	head() {
 		return {
 			title: 'Sport',
-			meta: [
-				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-				{ hid: 'description', name: 'description', content: 'sport activities in Krusevo' },
-			],
+			meta: [{ hid: 'description', name: 'description', content: 'sport activities in Krusevo' }],
 		}
 	},
 }

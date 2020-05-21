@@ -35,7 +35,7 @@
 			<div class="grid">
 				<n-link to="/sport">
 					<div class="image vertical">
-						<img data-src="/inspire/outdoor.jpg" class="lazyload" />
+						<img data-src="/inspire/outdoor.jpg" class="lazyload" alt="outdoor activites" />
 						<div class="color-overlay"></div>
 						<div class="text">
 							<h2>{{ $t('inspire.card1') }}</h2>
@@ -47,7 +47,7 @@
 				<div class="collage">
 					<n-link to="/inspire">
 						<div class="image">
-							<img data-src="/inspire/monuments.jpg" class="lazyload" />
+							<img data-src="/inspire/monuments.jpg" class="lazyload" alt="monuments" />
 							<div class="color-overlay"></div>
 							<div class="text">
 								<h2>{{ $t('inspire.card2') }}</h2>
@@ -58,7 +58,7 @@
 					</n-link>
 					<n-link to="/inspire">
 						<div class="image">
-							<img data-src="/inspire/food.jpg" class="lazyload" />
+							<img data-src="/inspire/food.jpg" class="lazyload" alt="restaurant alto" />
 							<div class="color-overlay"></div>
 							<div class="text">
 								<h2>{{ $t('inspire.card3') }}</h2>
@@ -76,9 +76,9 @@
 
 		<div class="sponsors">
 			<div class="grid">
-				<imageItem :source="'/logos/jeep.png'" />
-				<imageItem :source="'/logos/panorama.png'" />
-				<imageItem :source="'/logos/nlb.png'" />
+				<imageItem :source="'/logos/jeep.png'" :alt="'Jeep'" />
+				<imageItem :source="'/logos/panorama.png'" :alt="'Hotel Panorama'" />
+				<imageItem :source="'/logos/nlb.png'" :alt="'NLBank'" />
 			</div>
 		</div>
 	</div>
@@ -108,6 +108,12 @@ export default {
 		datePlaceholder() {
 			return this.$t('index.tripDate')
 		},
+	},
+	head() {
+		return {
+			title: 'AllSeasonsAdventure',
+			meta: [{ hid: 'description', name: 'description', content: 'Welcome To All Seasons Panorama' }],
+		}
 	},
 }
 </script>
