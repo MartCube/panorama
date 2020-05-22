@@ -59,7 +59,8 @@ export default {
 	head() {
 		return {
 			title: this.title,
-			meta: [{ hid: 'description', name: 'description', content: 'Blog Post' }],
+			meta: [{ hid: 'og:title', name: 'og:title', content: this.title }],
+			meta: [{ hid: 'og:image', name: 'og:image', content: this.mainImage }],
 		}
 	},
 }

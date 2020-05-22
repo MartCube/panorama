@@ -111,8 +111,10 @@ export default {
 	},
 	head() {
 		return {
-			title: 'AllSeasonsAdventure',
-			meta: [{ hid: 'description', name: 'description', content: 'Welcome To All Seasons Panorama' }],
+			title: 'AllSeasonsPanorama',
+			meta: [{ hid: 'description', name: 'description', content: 'All Seasons Adventure Panorama' }],
+			meta: [{ hid: 'og:title', name: 'og:title', content: 'AllSeasonsPanorama' }],
+			meta: [{ hid: 'og:image', name: 'og:image', content: '/logo.png' }],
 		}
 	},
 }
