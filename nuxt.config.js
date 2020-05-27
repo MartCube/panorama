@@ -54,7 +54,7 @@ module.exports = {
 		endpoint: 'https://allseasonsadventure.cdn.prismic.io/api/v2',
 		linkResolver: '@/plugins/link-resolver',
 		htmlSerializer: '@/plugins/html-serializer',
-		// preview: false,
+		preview: false,
 	},
 
 	// Build configuration
