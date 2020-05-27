@@ -46,15 +46,15 @@ module.exports = {
 		],
 		'@nuxtjs/prismic',
 		// modules for full static before `nuxt export` (coming in v2.12)
-		// '@/modules/static',
-		// '@/modules/crawler',
+		'@/modules/static',
+		'@/modules/crawler',
 	],
 
 	prismic: {
 		endpoint: 'https://allseasonsadventure.cdn.prismic.io/api/v2',
 		linkResolver: '@/plugins/link-resolver',
 		htmlSerializer: '@/plugins/html-serializer',
-		preview: false,
+		// preview: false,
 	},
 
 	// Build configuration
