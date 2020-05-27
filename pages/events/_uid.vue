@@ -46,6 +46,7 @@ export default {
 		if (post) {
 			return {
 				post,
+				uid: post.uid,
 				date,
 				tags: post.tags,
 				mainImage: post.data.post_image.url,
@@ -59,8 +60,11 @@ export default {
 	head() {
 		return {
 			title: this.title,
-			meta: [{ hid: 'og:title', name: 'og:title', content: this.title }],
-			meta: [{ hid: 'og:image', name: 'og:image', content: this.mainImage }],
+			meta: [
+				{ hid: 'og:title', name: 'og:title', content: this.title },
+				{ hid: 'og:image', property: 'og:image', content: this.mainImage },
+				{ hid: 'og:url', property: 'og:url', content: `/blog/${this.uid}` },
+			],
 		}
 	},
 }
