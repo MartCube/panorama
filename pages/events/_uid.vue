@@ -39,7 +39,7 @@ export default {
 	async asyncData({ $prismic, params, error }) {
 		// Query to get single post with params
 		const post = await $prismic.api.getByUID('blog-post', params.uid)
-
+		console.log(post)
 		var date = $prismic.asDate(post.data.post_date)
 		date = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: '2-digit' }).format(date)
 
@@ -61,9 +61,9 @@ export default {
 		return {
 			title: this.title,
 			meta: [
-				{ hid: 'og:title', name: 'og:title', content: this.title },
+				{ hid: 'og:title', property: 'og:title', content: this.title },
 				{ hid: 'og:image', property: 'og:image', content: this.mainImage },
-				{ hid: 'og:url', property: 'og:url', content: `/events/${this.uid}` },
+				{ hid: 'og:url', property: 'og:url', content: `https://allseasonspanorama.com/events/${this.uid}` },
 			],
 		}
 	},
