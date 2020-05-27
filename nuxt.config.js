@@ -46,8 +46,8 @@ module.exports = {
 		],
 		'@nuxtjs/prismic',
 		// modules for full static before `nuxt export` (coming in v2.12)
-		// '@/modules/static',
-		'@/modules/crawler',
+		'@/modules/static',
+		// '@/modules/crawler',
 	],
 
 	prismic: {
