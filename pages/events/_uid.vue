@@ -63,7 +63,7 @@ export default {
 			meta: [
 				{ hid: 'og:title', name: 'og:title', content: this.title },
 				{ hid: 'og:image', property: 'og:image', content: this.mainImage },
-				{ hid: 'og:url', property: 'og:url', content: `/blog/${this.uid}` },
+				{ hid: 'og:url', property: 'og:url', content: `/events/${this.uid}` },
 			],
 		}
 	},
