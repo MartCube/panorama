@@ -35,6 +35,7 @@ export default {
 		const blogPosts = await $prismic.api.query($prismic.predicates.at('document.type', 'blog-post'))
 
 		if (blogPosts) {
+			console.log(blogPosts.results)
 			return {
 				blogPosts: blogPosts.results,
 			}

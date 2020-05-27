@@ -40,6 +40,9 @@ module.exports = {
 			},
 		],
 		'@nuxtjs/prismic',
+		// modules for full static before `nuxt export` (coming in v2.12)
+		'@/modules/static',
+		'@/modules/crawler',
 	],
 
 	prismic: {
@@ -60,5 +63,8 @@ module.exports = {
 				vue.transformAssetUrls.source = ['data-srcset', 'srcset']
 			}
 		},
+	},
+	generate: {
+		fallback: '404.html', // Netlify reads a 404.html, Nuxt will load as an SPA
 	},
 }
