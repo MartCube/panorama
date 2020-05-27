@@ -4,9 +4,14 @@ module.exports = {
 	mode: 'universal',
 	head: {
 		title: 'AllSeasonsPanorama',
-		meta: [{ name: 'google-site-verification', content: 'mOFQvtsr0YJJziMpeEk2AZCh-yYiRwfv4mbhBMzbNQk' }, { charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { name: 'keywords', content: 'mountain, biking, krusevo, panorama, macedonia, paragliding, hotel, events, news,' }],
+		meta: [{ name: 'google-site-verification', content: 'mOFQvtsr0YJJziMpeEk2AZCh-yYiRwfv4mbhBMzbNQk' }, { charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { name: 'keywords', content: 'mountain, biking, paragliding, events, krusevo, macedonia, panorama, hotel, ' }],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
 	},
+	//things to add in future
+	//1. google analytics
+	//2. facebook webmaster
+	//3. sharing feature for blog
+	//4. custom 404 error page
 
 	// Customize the progress-bar color
 	loading: { color: '#4A88C8' },
