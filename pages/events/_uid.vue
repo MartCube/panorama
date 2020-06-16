@@ -4,9 +4,7 @@
 			<div class="image">
 				<img :data-src="mainImage" class="lazyload" :alt="title" />
 			</div>
-			<div class="title">
-				<h2>{{ title }}</h2>
-			</div>
+
 			<div class="date">
 				<i class="icon icon-calendar"></i>
 				{{ date }}
@@ -16,9 +14,12 @@
 					<a href="#"> <span>#</span>{{ tag }}</a>
 				</div>
 			</div>
+			<div class="title">
+				<h2>{{ title }}</h2>
+			</div>
 
 			<!-- add slices -->
-			<section v-for="(slice, index) in slices" :key="'slice-' + index">
+			<section v-for="(slice, index) in slices" :key="'slice-' + index" class="slice">
 				<template v-if="slice.slice_type === 'text'">
 					<prismic-rich-text class="paragraph" :field="slice.primary.text" />
 				</template>
@@ -84,26 +85,6 @@ $green: #7eb241;
 	align-content: center;
 	flex-wrap: wrap;
 
-	.image {
-		max-width: 800px;
-		height: 450px;
-		margin: 20px 0;
-		position: relative;
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center;
-			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
-		}
-		.description {
-			display: flex;
-			justify-content: center;
-			opacity: 0.8;
-			font-size: 0.9em;
-		}
-	}
 	.date {
 		display: flex;
 		width: 100%;
@@ -135,16 +116,16 @@ $green: #7eb241;
 		}
 	}
 	.title {
-		margin: 20px 0;
+		margin: 40px 0;
+
 		h2 {
 			font-family: 'next_bold';
 			font-size: 2.5em;
 			text-align: center;
+			margin: 0;
 		}
 	}
 	.paragraph {
-		margin: 20px 0;
-
 		a {
 			text-decoration: none;
 			color: #4a88c8;
@@ -153,6 +134,40 @@ $green: #7eb241;
 				color: #7eb241;
 			}
 		}
+		ol {
+			margin: 20px 40px;
+			li {
+				margin: 10px 0;
+			}
+		}
+		h4 {
+			font-size: 1.6em;
+			margin-bottom: 20px;
+		}
+	}
+	.image {
+		max-width: 800px;
+		height: 450px;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
+		}
+		.description {
+			display: flex;
+			justify-content: center;
+			opacity: 0.8;
+			font-size: 0.9em;
+		}
+	}
+
+	.slice {
+		width: 100%;
+		margin: 20px 0;
 	}
 }
 
@@ -161,11 +176,24 @@ $green: #7eb241;
 		width: 90%;
 		margin: 30% 0;
 
+		.title {
+			h2 {
+				font-size: 2em;
+			}
+		}
 		.date {
 			justify-content: center;
 		}
 		.tags {
 			justify-content: center;
+		}
+		.paragraph {
+			h4 {
+				font-size: 1.6em;
+			}
+			ol {
+				margin: 10px 20px;
+			}
 		}
 	}
 }
