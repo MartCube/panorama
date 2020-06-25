@@ -13,6 +13,7 @@
 	},
 	"dependencies": {
 		"@nuxtjs/prismic": "^1.1.1",
+		"@nuxtjs/pwa": "^3.0.0-beta.20",
 		"cookies": "^0.8.0",
 		"cross-env": "^7.0.2",
 		"lazysizes": "^5.2.2",

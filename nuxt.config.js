@@ -57,6 +57,13 @@ module.exports = {
 		preview: false,
 	},
 
+	pwa: {
+		manifest: {
+			name: 'All Seasons Panorama',
+			short_name: 'Panorama',
+		},
+	},
+
 	// Build configuration
 	build: {
 		// You can extend webpack config here
