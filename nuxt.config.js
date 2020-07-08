@@ -60,8 +60,9 @@ module.exports = {
 
 	pwa: {
 		manifest: {
-			name: 'All Seasons Panorama',
+			name: '',
 			short_name: 'Panorama',
+			theme_color: '#24292e',
 		},
 	},
 
