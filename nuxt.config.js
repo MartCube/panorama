@@ -63,6 +63,7 @@ module.exports = {
 			name: '',
 			short_name: 'Panorama',
 			theme_color: '#24292e',
+			background_color: '#24292e',
 		},
 	},
 
