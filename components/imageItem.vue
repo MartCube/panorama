@@ -1,6 +1,6 @@
 <template>
 	<div class="imageItem">
-		<img class="image lazyload" :data-srcset="source" :alt="alt" />
+		<img class="image lazyload" :data-src="source" :alt="alt" />
 	</div>
 </template>
 

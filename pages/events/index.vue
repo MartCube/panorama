@@ -9,14 +9,10 @@
 				<h2>events <span class="blue">&amp;</span> news</h2>
 			</div>
 
-			<div v-if="blogPosts.length !== 0" class="grid">
+			<div class="grid">
 				<section v-for="blogPost in blogPosts" :key="blogPost.id" :blogPost="blogPost">
 					<postCard :post="blogPost" />
 				</section>
-			</div>
-
-			<div v-else>
-				<p>No Posts published at this time.</p>
 			</div>
 		</div>
 	</div>
@@ -27,21 +23,24 @@ import bgItem from '~/components/bgItem.vue'
 import postCard from '~/components/postCard.vue'
 
 export default {
-	components: {
-		bgItem,
-		postCard,
-	},
-	async asyncData({ $prismic, error }) {
-		const blogPosts = await $prismic.api.query($prismic.predicates.at('document.type', 'blog-post'))
+	components: { bgItem, postCard },
+	async fetch() {
+		const blogPosts = await this.$prismic.api.query(this.$prismic.predicates.at('document.type', 'blog-post'), { orderings: '[document.first_publication_date desc]', pageSize: this.results_per_page, page: this.currentPage })
+		// console.log(blogPosts)
 
-		if (blogPosts) {
-			return {
-				blogPosts: blogPosts.results,
-			}
-		} else {
-			error({ statusCode: 404, message: 'Page not found' })
-		}
+		this.blogPosts = blogPosts.results
+		this.total_pages = blogPosts.total_pages
+		this.prev_page = blogPosts.prev_page
+		this.next_page = blogPosts.next_page
 	},
+	data: () => ({
+		blogPosts: null,
+		total_pages: null,
+		currentPage: 1,
+		results_per_page: 6,
+		prev_page: null,
+		next_page: null,
+	}),
 	head() {
 		return {
 			title: 'Events & News',

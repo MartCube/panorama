@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="post">
 			<div class="image">
-				<img :data-src="mainImage" class="lazyload" :alt="title" />
+				<img :data-src="mainImage + '&fit=crop&w=800&h=450'" class="lazyload" :alt="title" />
 			</div>
 
 			<div class="date">
@@ -25,7 +25,7 @@
 				</template>
 				<template v-if="slice.slice_type === 'image'">
 					<div class="image">
-						<img :data-src="slice.primary.image.url" class="lazyload" :alt="slice.primary.image.alt" />
+						<img :data-src="slice.primary.image.url + '&fit=crop&w=800&h=450'" class="lazyload" :alt="slice.primary.image.alt" />
 						<span class="description"> {{ slice.primary.image.alt }} </span>
 					</div>
 				</template>
@@ -40,7 +40,6 @@ export default {
 	async asyncData({ $prismic, params, error }) {
 		// Query to get single post with params
 		const post = await $prismic.api.getByUID('blog-post', params.uid)
-		console.log(post)
 		var date = $prismic.asDate(post.data.post_date)
 		date = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: '2-digit' }).format(date)
 

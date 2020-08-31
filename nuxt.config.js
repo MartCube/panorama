@@ -23,33 +23,39 @@ module.exports = {
 	plugins: [{ src: `~/plugins/lazysizes.client.js` }, { src: `~/plugins/vee-validate.js` }],
 
 	// Nuxt.js modules
-	modules: [
-		[
-			'nuxt-i18n',
+	modules: ['nuxt-i18n', '@nuxtjs/prismic', '@nuxtjs/pwa', '@aceforth/nuxt-optimized-images'],
+	target: 'static',
+	components: true,
+
+	optimizedImages: {
+		inlineImageLimit: -1,
+		optimizeImages: true,
+		defaultImageLoader: 'img-loader',
+		mozjpeg: {
+			quality: 85,
+		},
+		webp: {
+			quality: 85,
+		},
+	},
+
+	i18n: {
+		defaultLocale: 'en',
+		lazy: true,
+		langDir: 'locales/',
+		locales: [
 			{
-				defaultLocale: 'en',
-				lazy: true,
-				langDir: 'locales/',
-				locales: [
-					{
-						code: 'mk',
-						name: 'MK',
-						file: 'mk.js',
-					},
-					{
-						code: 'en',
-						name: 'EN',
-						file: 'en.js',
-					},
-				],
+				code: 'mk',
+				name: 'MK',
+				file: 'mk.js',
+			},
+			{
+				code: 'en',
+				name: 'EN',
+				file: 'en.js',
 			},
 		],
-		'@nuxtjs/prismic',
-		// modules for full static before `nuxt export` (coming in v2.12)
-		'@/modules/static',
-		'@/modules/crawler',
-		'@nuxtjs/pwa',
-	],
+	},
 
 	prismic: {
 		endpoint: 'https://allseasonsadventure.cdn.prismic.io/api/v2',
@@ -79,6 +85,7 @@ module.exports = {
 			}
 		},
 	},
+
 	generate: {
 		fallback: '404.html', // Netlify reads a 404.html, Nuxt will load as an SPA
 	},

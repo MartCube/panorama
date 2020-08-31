@@ -1,7 +1,7 @@
 <template>
 	<div class="card">
 		<nuxt-link :to="link">
-			<img :data-src="post.data.post_image.url" class="lazyload" />
+			<img :data-src="post.data.post_image.url + '&fit=crop&w=350&h=350'" class="lazyload" />
 			<div class="color-overlay"></div>
 			<div class="text">
 				<div class="date">
@@ -9,9 +9,7 @@
 				</div>
 				<h2>{{ $prismic.asText(post.data.post_title) }}</h2>
 
-				<div class="btn">
-					read more
-				</div>
+				<div class="btn">read more</div>
 			</div>
 		</nuxt-link>
 	</div>
@@ -34,7 +32,7 @@ export default {
 	created() {
 		this.link = this.$prismic.linkResolver(this.post)
 
-		var date = this.$prismic.asDate(this.post.data.post_date)
+		var date = this.$prismic.asDate(this.post.first_publication_date)
 		this.formattedDate = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: '2-digit' }).format(date)
 	},
 }
